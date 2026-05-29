@@ -1,0 +1,23 @@
+import datetime
+print("=== Jarvis Time Assistant ===")
+print("Commands:")
+print("time  -> show current time")
+print("date  -> show today's date")
+print("day   -> show current day")
+print("exit  -> close Jarvis\n")
+while True:
+    command = input("Enter command: ").lower()
+    if command == "time":
+        current_time = datetime.datetime.now().strftime("%I:%M:%S %p")
+        print("Jarvis: Current time is", current_time)
+    elif command == "date":
+        current_date = datetime.datetime.now().strftime("%d-%m-%Y")
+        print("Jarvis: Today's date is", current_date)
+    elif command == "day":
+        current_day = datetime.datetime.now().strftime("%A")
+        print("Jarvis: Today is", current_day)
+    elif command == "exit":
+        print("Jarvis: Goodbye, stay punctual!")
+        break
+    else:
+        print("Jarvis: Invalid command, try again.")
